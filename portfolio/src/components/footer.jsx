@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "../styles/Footer.css";
+import perfil from "../assets/perfil.jpg";
+import githubIcon from "../assets/icons/github.png";
+import linkedinIcon from "../assets/icons/linkdln.png";
 
 function Footer() {
   const [formData, setFormData] = useState({
@@ -14,7 +17,6 @@ function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você pode enviar os dados para um backend ou serviço de email
     console.log("Formulário enviado:", formData);
     alert("Mensagem enviada! Obrigado.");
     setFormData({ nome: "", email: "", mensagem: "" });
@@ -24,15 +26,18 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
- 
-  <p className="contact-msg">Gostou do meu trabalho? Entre em contato</p>
+            <img src={perfil} alt="Foto de Lukas Romero" className="profile-photo" />
+        <p className="contact-msg">
+            <strong>Gostou do meu trabalho? Entre em contato</strong>
+        </p>
+        
   
   <div className="social-icons">
     <a href="https://github.com/lukasreei" target="_blank" rel="noopener noreferrer">
-      <img src="/icons/github.png" alt="GitHub" />
+      <img src={githubIcon} alt="GitHub" />
     </a>
     <a href="https://www.linkedin.com/in/lukas-romerodev/" target="_blank" rel="noopener noreferrer">
-      <img src="/icons/linkedin.png" alt="LinkedIn" />
+      <img src={linkedinIcon} alt="LinkedIn" />
     </a>
     {/* Adicione mais ícones se quiser */}
   </div>
