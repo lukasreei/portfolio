@@ -1,0 +1,103 @@
+.sobre-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #F3F4F6; /* cor de fundo da seção */
+}
+
+/* card principal */
+.sobre-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1400px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.sobre-card:hover {
+  transform: translateY(-5px);
+}
+
+/* imagem */
+.sobre-imagem img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* texto */
+.sobre-texto {
+  flex: 1;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+.sobre-subtitulo {
+  font-size: 1.2rem;
+  color: #1F2937;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
+
+.sobre-titulo {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: #2563EB;
+  font-size: 24px;
+}
+
+.sobre-texto p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #1F2937;
+}
+
+.btn-cv {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-cv:hover {
+  background-color: #444;
+}
+
+/* animação fade-in */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* responsividade */
+@media (max-width: 900px) {
+  .sobre-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-imagem img {
+    width: 250px;
+  }
+
+  .sobre-titulo {
+    font-size: 2rem;
+  }
+}

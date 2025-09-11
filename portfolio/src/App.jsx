@@ -3,13 +3,15 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Card from "./components/card";
 import Home from "./components/home";
+import sobre from "./components/sobre";
+import Sobre from "./components/sobre";
 
 function App() {
   return (
     <div>
       <Header />
       <Home></Home>
-      <Card />
+      <Sobre />
       <Footer />
     </div>
   );

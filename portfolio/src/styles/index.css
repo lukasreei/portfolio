@@ -7,5 +7,19 @@ body {
   padding-top: 70px;
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #F3F4F6;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
