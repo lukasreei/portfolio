@@ -3,6 +3,7 @@ import "../styles/Footer.css";
 import perfil from "../assets/perfil.jpg";
 import githubIcon from "../assets/icons/github.png";
 import linkedinIcon from "../assets/icons/linkdln.png";
+import emailjs from "emailjs-com";
 
 function Footer() {
   const [formData, setFormData] = useState({
@@ -17,32 +18,60 @@ function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Formulário enviado:", formData);
-    alert("Mensagem enviada! Obrigado.");
-    setFormData({ nome: "", email: "", mensagem: "" });
+
+    emailjs
+      .send(
+        "lukasdev",    // Service ID do EmailJS
+        "template_xfks8vq",   // Template ID
+        {
+          from_name: formData.nome,
+          from_email: formData.email,
+          message: formData.mensagem,
+        },
+        "SIw65t0eKuIWc7OaNy"     // Public Key do EmailJS
+      )
+      .then(
+        () => {
+          alert("Mensagem enviada com sucesso!");
+          setFormData({ nome: "", email: "", mensagem: "" });
+        },
+        (error) => {
+          alert("Erro ao enviar. Tente novamente.");
+          console.error(error);
+        }
+      );
   };
 
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-            <img src={perfil} alt="Foto de Lukas Romero" className="profile-photo" />
-        <p className="contact-msg">
+          <img
+            src={perfil}
+            alt="Foto de Lukas Romero"
+            className="profile-photo"
+          />
+          <p className="contact-msg">
             <strong>Gostou do meu trabalho? Entre em contato</strong>
-        </p>
-        
-  
-  <div className="social-icons">
-    <a href="https://github.com/lukasreei" target="_blank" rel="noopener noreferrer">
-      <img src={githubIcon} alt="GitHub" />
-    </a>
-    <a href="https://www.linkedin.com/in/lukas-romerodev/" target="_blank" rel="noopener noreferrer">
-      <img src={linkedinIcon} alt="LinkedIn" />
-    </a>
-    {/* Adicione mais ícones se quiser */}
-  </div>
-</div>
+          </p>
 
+          <div className="social-icons">
+            <a
+              href="https://github.com/lukasreei"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={githubIcon} alt="GitHub" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lukas-romerodev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedinIcon} alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
 
         <div className="footer-right">
           <p>Entre em contato:</p>
