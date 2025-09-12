@@ -38,7 +38,7 @@ function Experiencias() {
   }, []);
 
   return (
-    <section className="experiencias" ref={sectionRef}>
+    <section className="experiencias" ref={sectionRef} id="experiencias">
       <h2>💼 Experiência</h2>
       <div className="timeline">
         {experiencias.map((exp, i) => (
