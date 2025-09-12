@@ -1,0 +1,101 @@
+.experiencias {
+  padding: 4rem 2rem;
+  background-color: #f3f4f6;
+}
+
+.experiencias h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Linha central */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #7b5cf3;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Items */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+/* Cards esquerda/direita */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Card */
+.timeline-content {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: relative;
+  display: inline-block;
+  max-width: 350px;
+  z-index: 2;
+}
+
+/* Triângulo apontando para a linha */
+.timeline-item.left .timeline-content::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline-item.right .timeline-content::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-item .timeline-content::after {
+    display: none;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+}

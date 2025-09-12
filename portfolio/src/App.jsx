@@ -5,6 +5,8 @@ import Card from "./components/card";
 import Home from "./components/home";
 import sobre from "./components/sobre";
 import Sobre from "./components/sobre";
+import Projetos from "./components/projetos";
+import Experiencias from "./components/Experiencias";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Header />
       <Home></Home>
       <Sobre />
+      <Projetos/>
+      <Experiencias/>
       <Footer />
     </div>
   );
