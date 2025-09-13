@@ -55,15 +55,14 @@ function Sobre() {
             Oi, pessoal! Meu nome é <strong>Lukas Romero</strong>, sou
             desenvolvedor júnior apaixonado por tecnologia, com foco em{" "}
             <strong>Flutter, React e segurança de aplicações</strong>.
-            Atualmente, trabalho na <strong>SUDEMA</strong>, aplicando
+            Atualmente, trabalho na <strong>SUDEMA - Superintendência de Administração do Meio Ambiente</strong>, aplicando
             conhecimentos em projetos reais enquanto continuo estudando para
             aprimorar minhas habilidades.
           </p>
           <p>
-            Além de programar, gosto de compartilhar conhecimento, aprender novas
-            tecnologias e enfrentar desafios que me ajudam a crescer
-            profissionalmente. Nos momentos de lazer, gosto de um bom livro, de
-            música e de jogos 🎮.
+          Fora do mundo da programação, sou ativo na <strong>Ordem DeMolay</strong>, onde já ocupei cargos de liderança e participei de projetos
+          que reforçam valores como responsabilidade, trabalho em equipe e desenvolvimento pessoal. Essa vivência me ensinou a liderar com empatia
+           e a valorizar a colaboração, habilidades que aplico tanto na vida profissional quanto pessoal.
           </p>
           <a href={profile} download="Curriculo-Lukas-Romero.pdf">
             <motion.button className="btn-cv" variants={itemVariants}>
