@@ -3,6 +3,7 @@ import "../styles/Footer.css";
 import perfil from "../assets/perfil.jpg";
 import githubIcon from "../assets/icons/github.png";
 import linkedinIcon from "../assets/icons/linkdln.png";
+import whatsappIcon from "../assets/icons/zap.png"; // <-- Novo ícone do WhatsApp
 import emailjs from "emailjs-com";
 
 function Footer() {
@@ -21,14 +22,14 @@ function Footer() {
 
     emailjs
       .send(
-        "lukasdev",    // Service ID do EmailJS
-        "template_xfks8vq",   // Template ID
+        "lukasdev",
+        "template_xfks8vq",
         {
           from_name: formData.nome,
           from_email: formData.email,
           message: formData.mensagem,
         },
-        "SIw65t0eKuIWc7OaNy"     // Public Key do EmailJS
+        "SIw65t0eKuIWc7OaNy"
       )
       .then(
         () => {
@@ -69,6 +70,13 @@ function Footer() {
               rel="noopener noreferrer"
             >
               <img src={linkedinIcon} alt="LinkedIn" />
+            </a>
+            <a
+              href="https://wa.me/5583991228516"  // <-- coloque seu número aqui
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={whatsappIcon} alt="WhatsApp" />
             </a>
           </div>
         </div>
