@@ -6,7 +6,7 @@ Este projeto foi desenvolvido para apresentar minhas habilidades, projetos e exp
 ---
 
 ## 🚀 Tecnologias Utilizadas
-- **Frontend:** React, Vite, TailwindCSS / CSS puro
+- **Frontend:** React, Vite, CSS puro
 - **Hospedagem:** GitHub Pages
 - **Integrações:** EmailJS (formulário de contato)
 - **Ferramentas:** Git, GitHub, VS Code
