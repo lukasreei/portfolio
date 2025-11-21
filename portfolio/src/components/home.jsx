@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import "../styles/Home.css"; 
 import perfil from "../assets/perfil.jpg";
 import profile from "../assets/profile.pdf";
+import perfill from "../assets/perfil.jpeg";
 
 function Home() {
   return (
@@ -53,7 +54,7 @@ function Home() {
         </div>
 
         <motion.img 
-          src={perfil} 
+          src={perfill} 
           alt="Foto de Lukas Romero" 
           className="foto"
           initial={{ opacity: 0, y: 50 }}

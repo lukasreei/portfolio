@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import "../styles/Sobre.css";
 import perfil from "../assets/perfil.jpg";
 import profile from "../assets/profile.pdf";
+import perfill from "../assets/perfil.jpeg";
 
 function Sobre() {
   const sectionRef = useRef();
@@ -44,7 +45,7 @@ function Sobre() {
       >
         {/* Imagem à esquerda */}
         <motion.div className="sobre-imagem" variants={itemVariants}>
-          <img src={perfil} alt="Foto de Lukas Romero" />
+          <img src={perfill} alt="Foto de Lukas Romero" />
         </motion.div>
 
         {/* Texto à direita */}

@@ -1,28 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion"; 
 import "../styles/Projetos.css";
+import bazarImg from "../assets/bazar.png";
+import Sudema from "../assets/mocksudema.jpeg";
 
 const projetos = [
   {
     id: 1,
-    titulo: "Portfólio Pessoal",
-    descricao: "Este é o site do meu portfólio desenvolvido em React.",
-    imagem: "https://via.placeholder.com/320x200",
-    link: "#",
-    emConstrucao: false
-  },
-  {
-    id: 2,
-    titulo: "ServeRest",
-    descricao:
-      "Projeto com o objetivo de realizar testes automatizados para a API do 'ServeRest' utilizando Java, RestAssured e JUnit.",
-    imagem: "https://via.placeholder.com/320x200",
+    titulo: "Sudema +",
+    descricao: "Sudema+: serviços, noticias e sustentabilidade ao seu alcance",
+    imagem: Sudema,
     link: "#",
     emConstrucao: true
   },
   {
+    id: 1,
+    titulo: "Bazar DeMolay",
+    descricao: "Projeto React do bazar criado para o Capítulo DeMolay.",
+    imagem: bazarImg,
+    link: "https://lukasreei.github.io/bazarhq",
+    emConstrucao: false
+  },
+  {
     id: 3,
-    titulo: "Portfólio Pessoal",
+    titulo: "Ibico",
     descricao: "",
     imagem: "https://via.placeholder.com/320x200",
     link: "#",
@@ -30,7 +31,7 @@ const projetos = [
   },
   {
     id: 4,
-    titulo: "Agenda To-Do",
+    titulo: "Nutri Brasil",
     descricao: "",
     imagem: "https://via.placeholder.com/320x200",
     link: "#",
