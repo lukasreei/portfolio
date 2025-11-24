@@ -14,7 +14,7 @@ const projetos = [
     emConstrucao: true
   },
   {
-    id: 1,
+    id: 2,
     titulo: "Bazar DeMolay",
     descricao: "Projeto React do bazar criado para o Capítulo DeMolay.",
     imagem: bazarImg,
@@ -77,19 +77,25 @@ function Projetos() {
                 <div className="faixa-construcao">🚧 Em Construção</div>
               )}
             </div>
+
             <div className="card-conteudo">
               {proj.descricao ? (
                 <>
                   <h3>{proj.titulo}</h3>
                   <p>{proj.descricao}</p>
-                  <a
-                    href={proj.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn"
-                  >
-                    Ver Projeto
-                  </a>
+
+                  {proj.emConstrucao ? (
+                    <span className="btn em-breve">Em breve</span>
+                  ) : (
+                    <a
+                      href={proj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn"
+                    >
+                      Ver Projeto
+                    </a>
+                  )}
                 </>
               ) : (
                 <div className="faixa">
@@ -97,6 +103,7 @@ function Projetos() {
                 </div>
               )}
             </div>
+
           </motion.div>
         ))}
       </div>

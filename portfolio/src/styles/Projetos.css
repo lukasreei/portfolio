@@ -118,3 +118,9 @@
     opacity: 1;
   }
 }
+.btn.em-breve {
+  background-color: #777;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.85;
+}
