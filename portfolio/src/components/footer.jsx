@@ -5,6 +5,7 @@ import githubIcon from "../assets/icons/github.png";
 import linkedinIcon from "../assets/icons/linkdln.png";
 import whatsappIcon from "../assets/icons/zap.png"; // <-- Novo ícone do WhatsApp
 import emailjs from "emailjs-com";
+import perfill from "../assets/perfil.jpeg";
 
 function Footer() {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-left">
           <img
-            src={perfil}
+            src={perfill}
             alt="Foto de Lukas Romero"
             className="profile-photo"
           />
