@@ -12,12 +12,19 @@ const experiencias = [
   },
   {
     id: 2,
+    cargo: "Desenvolvedor Web e Mobile",
+    empresa: "Ibico Brasil",
+    periodo: "Novembro 2025 - Atual",
+    descricao: "Desenvolvimento Web e Mobile"
+  },
+  {
+    id: 3,
     cargo: "Desenvolvedor de aplicativos móveis",
     empresa: "Ubtech",
     periodo: "Agosto 2024 - Abril 2025",
     descricao: "Desenvolvimento de aplicações mobile"
   },
-  
+
 ];
 
 function Experiencias() {
